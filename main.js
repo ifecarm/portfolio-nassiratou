@@ -141,6 +141,9 @@
     if (desktop) gsap.to('.giant', { xPercent: -6, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     /* blocs compétences : arrivée en décalé */
     $$('.blk').forEach((b, i) => gsap.from(b, { y: 60 + i * 30, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: '.blocks', start: 'top 85%' } }));
+    /* logo IFECARM : tourne doucement pendant que la section défile */
+    gsap.fromTo('.ife__logo img', { rotate: -50 }, { rotate: 130, ease: 'none',
+      scrollTrigger: { trigger: '.ife', start: 'top bottom', end: 'bottom top', scrub: true } });
     /* ===== FIN SITE ===== */
   });
 
